@@ -1,0 +1,25 @@
+domain: rukpak.io
+layout:
+- go.kubebuilder.io/v4-alpha
+projectName: rukpak-catalogsource
+repo: rukpak-catalogsource
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: rukpak.io
+  group: core
+  kind: CatalogSource
+  path: rukpak-catalogsource/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: rukpak.io
+  group: core
+  kind: CatalogCache
+  path: rukpak-catalogsource/api/v1alpha1
+  version: v1alpha1
+version: "3"

@@ -1,0 +1,7 @@
+apiVersion: core.rukpak.io/v1alpha1
+kind: CatalogSource
+metadata:
+  name: catalogsource-sample
+spec:
+  image: <index-image>
+  pollingInterval: 45m

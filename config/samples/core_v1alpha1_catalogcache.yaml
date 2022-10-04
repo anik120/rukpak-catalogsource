@@ -1,0 +1,12 @@
+apiVersion: core.rukpak.io/v1alpha1
+kind: CatalogCache
+metadata:
+  labels:
+    app.kubernetes.io/name: catalogcache
+    app.kubernetes.io/instance: catalogcache-sample
+    app.kubernetes.io/part-of: rukpak-catalogsource
+    app.kuberentes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: rukpak-catalogsource
+  name: catalogcache-sample
+spec:
+  # TODO(user): Add fields here

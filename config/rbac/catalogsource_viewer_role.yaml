@@ -1,0 +1,20 @@
+# permissions for end users to view catalogsources.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: catalogsource-viewer-role
+rules:
+- apiGroups:
+  - core.rukpak.io
+  resources:
+  - catalogsources
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - core.rukpak.io
+  resources:
+  - catalogsources/status
+  verbs:
+  - get

@@ -1,0 +1,24 @@
+# permissions for end users to edit catalogsources.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: catalogsource-editor-role
+rules:
+- apiGroups:
+  - core.rukpak.io
+  resources:
+  - catalogsources
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - core.rukpak.io
+  resources:
+  - catalogsources/status
+  verbs:
+  - get

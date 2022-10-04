@@ -1,0 +1,24 @@
+# permissions for end users to edit catalogcaches.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: catalogcache-editor-role
+rules:
+- apiGroups:
+  - core.rukpak.io
+  resources:
+  - catalogcaches
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - core.rukpak.io
+  resources:
+  - catalogcaches/status
+  verbs:
+  - get
